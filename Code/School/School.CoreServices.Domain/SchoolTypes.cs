@@ -1,6 +1,6 @@
 ﻿
 namespace School.CoreServices.Domain
 {
-    public enum gender { Male, Female }
+    public enum gender { M, F , E }
 
 }
