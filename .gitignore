@@ -3,3 +3,9 @@
 ################################################################################
 
 /Code/School/.vs/School
+/Code/School/School/obj
+/Code/School/School.CoreServices.Domain/obj
+/Code/School/School.CoreServices.Services/obj
+/Code/School/School.Utils.Persistance/obj
+/Code/School/School.CoreServices.DAO/obj
+/Code/School/School.Utils.CSV/obj

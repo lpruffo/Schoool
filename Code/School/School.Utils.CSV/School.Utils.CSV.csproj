@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\School.CoreServices.Domain\School.CoreServices.Domain.csproj" />
-    <ProjectReference Include="..\School.Utils.Persistance\School.Utils.Persistance.csproj" />
   </ItemGroup>
 
 </Project>

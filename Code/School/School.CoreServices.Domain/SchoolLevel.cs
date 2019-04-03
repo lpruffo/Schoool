@@ -7,7 +7,6 @@ namespace School.CoreServices.Domain
     public class SchoolLevel
     {
         public string Id { get; set; }
-        public string Name { get; set; }
         public string Descpription { get; set; }
     }
 }
