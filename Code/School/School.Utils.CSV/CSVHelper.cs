@@ -8,11 +8,16 @@ namespace School.Utils.CSV
 {
     sealed class CSVHelper
     {
-        private static readonly Lazy<CSVHelper> csvHelperInstance = new Lazy<CSVHelper>(() => new CSVHelper());
-        private CSVHelper() { }
+        private static readonly Lazy<CSVHelper> csvHelperInstance = 
+            new Lazy<CSVHelper>(() => new CSVHelper());
+        
         public static CSVHelper CsvHelperInstance
         {
             get { return csvHelperInstance.Value; }
+        }
+
+        private CSVHelper()
+        {
         }
 
         public static List<Student> ReadCSVfromFile (string fileName)
