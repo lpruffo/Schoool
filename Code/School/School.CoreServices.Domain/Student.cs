@@ -7,7 +7,7 @@ namespace School.CoreServices.Domain
     public class Student : Person
     {
         public string SchoolLevelID { get; set; }
-        public DateTime LastModificaction { get; set; }
+        public string LastModificaction { get; set; }
 
         public Student() { }
     }

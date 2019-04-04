@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace School.Utils.Persistance
 {
@@ -6,7 +7,7 @@ namespace School.Utils.Persistance
     {
         T Create(T item);
         T ReadById(int id);
-        T[] Read(string[] fields, string[] values);
+        List<T> Read(string[] fields, string[] values);
         T Update(T item);
         void Delete(int id);        
     }

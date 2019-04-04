@@ -30,7 +30,7 @@ namespace School.Utils.CSV
                         SchoolLevelID = data[0],
                         Name = data[1],
                         Gender = data[2]=="M"? gender.M: (data[2] == "F" ? gender.F: gender.E ) ,
-                        LastModificaction = GetDateFromSCVString(data[3])
+                        LastModificaction = data[3]
                     })
                     .ToList();
             return students;
