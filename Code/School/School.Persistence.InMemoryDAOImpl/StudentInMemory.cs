@@ -6,17 +6,17 @@ using System.Text;
 
 namespace School.Persistence.InMemoryDAOImpl
 {
-    public sealed class InMemory
+    public sealed class StudentInMemory
     {
-        private static readonly Lazy<InMemory> lazy =
-        new Lazy<InMemory>(() => new InMemory());
+        private static readonly Lazy<StudentInMemory> lazy =
+        new Lazy<StudentInMemory>(() => new StudentInMemory());
 
-        public static InMemory Instance
+        public static StudentInMemory Instance
         {
             get { return lazy.Value; }
         }
 
-        private InMemory()
+        private StudentInMemory()
         {
         }
 
@@ -48,10 +48,14 @@ namespace School.Persistence.InMemoryDAOImpl
             
         }
 
-        public static List<Student> ReadStudent( string Name )
+        public static List<Student> ReadStudent(string schoolLevelId, string name, gender? gender, string lastModification)
         {
+
             IEnumerable<Student> tempSearch = (from student in StudentData.Values
-                                               where (Name != null ? student.Name == Name : true)
+                                               where (schoolLevelId != string.Empty ? student.SchoolLevelID == schoolLevelId : true) &&
+                                               (name != string.Empty ? student.Name.ToLower() == name.ToLower() : true) &&
+                                               (gender != null ? student.Gender == gender : true) &&
+                                               (lastModification != string.Empty ? student.LastModificaction == lastModification : true) 
                                                select student
                                                );
             return tempSearch.ToList();

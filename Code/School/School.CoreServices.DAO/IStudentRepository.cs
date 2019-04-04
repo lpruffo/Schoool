@@ -7,11 +7,11 @@ namespace School.CoreServices.DAO
     public interface IStudentRepository
     {
         Student CreateStudent(Student student);
-                
-        List<Student> ReadStudent(string name);
 
-        Student UpdateStudent(Student plane);
+        List<Student> ReadStudent(string[] fields, string[] values);
 
-        Student DeleteStudent(Student plane);
+        Student UpdateStudent(Student student);
+
+        Student DeleteStudent(Student student);
     }
 }

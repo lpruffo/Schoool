@@ -9,7 +9,7 @@ namespace School.Persistence.InMemoryDAOImpl
     {
         public Student CreateStudent(Student student)
         {
-            if (InMemory.AddStudent(student))
+            if (StudentInMemory.AddStudent(student))
             {
                 return student;
             }
@@ -19,17 +19,44 @@ namespace School.Persistence.InMemoryDAOImpl
             }
         }
 
-        public Student DeleteStudent(Student plane)
+        public Student DeleteStudent(Student student)
         {
             throw new NotImplementedException();
         }
 
-        public List<Student> ReadStudent(string name)
+        public List<Student> ReadStudent (string[] fields, string[] values)
         {
-            return InMemory.ReadStudent(name);
+            string schoolLevelId = string.Empty;
+            string name = string.Empty;
+            gender? genderl = null;
+            string lastModification = string.Empty;
+
+            for (int i = 0; i < fields.Length; i++)
+            {
+                switch (fields[i])
+                {
+                    case "SchoolLevelId":
+                        schoolLevelId = values[i];
+                        break;
+                    case "Name":
+                        name = values[i];
+                        break;
+                    case "Gender":
+                        genderl = values[i] == "F" ? gender.F : values[i] == "M" ? gender.M : gender.E;
+                        genderl = genderl == gender.E ? null: genderl ;
+                        break;
+                    case "LastModification":
+                        lastModification = values[i];
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return StudentInMemory.ReadStudent( schoolLevelId,name,genderl,lastModification );
+            
         }
 
-        public Student UpdateStudent(Student plane)
+        public Student UpdateStudent(Student student)
         {
             throw new NotImplementedException();
         }

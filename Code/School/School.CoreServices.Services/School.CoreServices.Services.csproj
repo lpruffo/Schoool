@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\School.CoreServices.DAO\School.CoreServices.DAO.csproj" />
     <ProjectReference Include="..\School.CoreServices.Domain\School.CoreServices.Domain.csproj" />
+    <ProjectReference Include="..\School.Persistence.InMemoryDAOImpl\School.Persistence.InMemoryDAOImpl.csproj" />
     <ProjectReference Include="..\School.Utils.Persistance\School.Utils.Persistance.csproj" />
   </ItemGroup>
 
