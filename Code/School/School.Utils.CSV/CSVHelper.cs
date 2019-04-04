@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace School.Utils.CSV
 {
-    sealed class CSVHelper
+    public sealed class CSVHelper
     {
         private static readonly Lazy<CSVHelper> csvHelperInstance = 
             new Lazy<CSVHelper>(() => new CSVHelper());

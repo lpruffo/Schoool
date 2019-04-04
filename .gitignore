@@ -10,3 +10,10 @@
 /Code/School/School.CoreServices.DAO/obj
 /Code/School/School.Utils.CSV/obj
 /Code/School/School.Persistence.InMemoryDAOImpl/obj
+/Code/School/School/bin/Debug/netcoreapp2.1
+/Code/School/School.CoreServices.DAO/bin/Debug/netcoreapp2.1
+/Code/School/School.CoreServices.Domain/bin/Debug/netcoreapp2.1
+/Code/School/School.CoreServices.Services/bin/Debug/netcoreapp2.1
+/Code/School/School.Persistence.InMemoryDAOImpl/bin/Debug/netcoreapp2.1
+/Code/School/School.Utils.CSV/bin/Debug/netcoreapp2.1
+/Code/School/School.Utils.Persistance/bin/Debug/netcoreapp2.1

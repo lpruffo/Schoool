@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\School.CoreServices.Services\School.CoreServices.Services.csproj" />
+    <ProjectReference Include="..\School.Utils.CSV\School.Utils.CSV.csproj" />
+  </ItemGroup>
+
 </Project>
