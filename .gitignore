@@ -17,3 +17,12 @@
 /Code/School/School.Persistence.InMemoryDAOImpl/bin/Debug/netcoreapp2.1
 /Code/School/School.Utils.CSV/bin/Debug/netcoreapp2.1
 /Code/School/School.Utils.Persistance/bin/Debug/netcoreapp2.1
+/Code/School/School/bin/Release/netcoreapp2.1
+/Code/School/School.CoreServices.DAO/bin/Release/netcoreapp2.1
+/Code/School/School.CoreServices.Domain/bin/Release/netcoreapp2.1
+/Code/School/School.CoreServices.Services/bin/Release/netcoreapp2.1
+/Code/School/School.Persistence.InMemoryDAOImpl/bin/Release/netcoreapp2.1
+/Code/School/School.Utils.CSV/bin/Release/netcoreapp2.1
+/Code/School/School.Utils.Persistance/bin/Release/netcoreapp2.1
+/Code/win10-x64/publish
+/Code/win10-x64

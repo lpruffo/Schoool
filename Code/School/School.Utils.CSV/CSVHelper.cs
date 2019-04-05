@@ -22,18 +22,28 @@ namespace School.Utils.CSV
 
         public static List<Student> ReadCSVfromFile (string fileName)
         {
-            var csvlines = File.ReadAllLines(fileName); 
-            var students = csvlines.Select(l => l.Split(','))
-                    .Skip(1)
-                    .Select(data => new Student
-                    {
-                        SchoolLevelID = data[0],
-                        Name = data[1],
-                        Gender = data[2]=="M"? gender.M: (data[2] == "F" ? gender.F: gender.E ) ,
-                        LastModificaction = data[3]
-                    })
-                    .ToList();
+            List<Student> students = null;
+            try
+            {
+                var csvlines = File.ReadAllLines(fileName);
+                students = csvlines.Select(l => l.Split(','))
+                        .Skip(1)
+                        .Select(data => new Student
+                        {
+                            SchoolLevelID = data[0],
+                            Name = data[1],
+                            Gender = data[2] == "M" ? gender.M : (data[2] == "F" ? gender.F : gender.E),
+                            LastModificaction = data[3]
+                        })
+                        .ToList();
+                
+            }
+            catch (Exception)
+            {
+                Console.WriteLine(" File not exist ");
+            }
             return students;
+
         }
 
         private static DateTime GetDateFromSCVString(string date)

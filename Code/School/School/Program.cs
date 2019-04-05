@@ -16,12 +16,15 @@ namespace School
             if (args.Length == 1)
             {
                 students = CSVHelper.ReadCSVfromFile(args[0]);
-                foreach (var student in students)
+                if (students != null)
                 {
-                    var a = studentService.Create(student);
-                }                
+                    foreach (var student in students)
+                    {
+                        var a = studentService.Create(student);
+                    }
+                }
             }
-            else
+            else if (args.Length > 1)
             {
                 string[] fields = new string[args.Length-1];
                 string[] values = new string[args.Length - 1];
